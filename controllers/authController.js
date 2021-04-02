@@ -16,6 +16,7 @@ exports.autenticarUsuario = async (req, res) => {
     try {
         // Revisar que sea un usuario registrado
         let usuario = await Usuario.findOne({ email });
+        console.log(usuario);
         if(!usuario) {
             return res.status(400).json({msg: 'El usuario no existe'});
         }
