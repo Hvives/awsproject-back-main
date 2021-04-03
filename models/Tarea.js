@@ -18,6 +18,6 @@ const TareaSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Proyecto'
     }
-});
+}, { collection: 'Tarea'});
 
 module.exports = mongoose.model('Tarea', TareaSchema);

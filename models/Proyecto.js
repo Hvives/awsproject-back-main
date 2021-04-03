@@ -14,6 +14,6 @@ const ProyectoSchema = mongoose.Schema({
         type: Date,
         default: Date.now()
     }
-});
+}, { collection: 'Proyecto'});
 
 module.exports = mongoose.model('Proyecto', ProyectoSchema);
